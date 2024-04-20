@@ -25,7 +25,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (x != 0 || y != 0)
         {
-            Vector3 pos = Camera.main.WorldToScreenPoint(new Vector3(x, y, 0));
+            // Vector3 pos = Camera.main.WorldToScreenPoint(new Vector3(x, y, 0));
+            Vector3 pos = new Vector3(x, y, 0);
             transform.position = Vector3.Lerp(transform.position, pos, speed * Time.deltaTime);
         }
     }
